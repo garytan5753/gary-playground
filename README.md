@@ -15,6 +15,6 @@
 
     #### Example ping results save in the file
 
-    ![](images\ping-test-result.png)
+    ![](https://github.com/garytan5753/gary-playground/blob/main/images/ping-test-result.png)
 
     
