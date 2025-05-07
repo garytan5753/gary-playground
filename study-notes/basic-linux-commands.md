@@ -1,5 +1,5 @@
 # Linux Commands
-
+## Working with Directory and Files
 | **Command** | **Description** | **Example Usage** |
 |-------------|-----------------|-------------------|
 | `echo`      | Prints a line of text or the value of an environment variable | `echo Hi` |
@@ -12,7 +12,6 @@
 | `mv`        | Moves or renames files and directories | `mv new_file.txt sample_file.txt` |
 | `touch`     | Creates a new, empty file | `touch new_file.txt` |
 
-## Working with Directory and Files
 ### Create an entire directory tree in single command, 
 `mkdir -p /home/gary/folder1/subfoler1`
 
