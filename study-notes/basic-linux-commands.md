@@ -1,3 +1,5 @@
+# Linux Commands
+
 | **Command** | **Description** | **Example Usage** |
 |-------------|-----------------|-------------------|
 | `echo`      | Prints a line of text or the value of an environment variable | `echo Hi` |
@@ -10,7 +12,7 @@
 | `mv`        | Moves or renames files and directories | `mv new_file.txt sample_file.txt` |
 | `touch`     | Creates a new, empty file | `touch new_file.txt` |
 
-
+## Working with Directory and Files
 ### Create an entire directory tree in single command, 
 `mkdir -p /home/gary/folder1/subfoler1`
 
@@ -58,5 +60,55 @@
 `rm -rf gary_dir`  
 *Note: `r`(--recursive) Removes directories and contents recursively, `-f` (--force) Force removal without confirmation even files are write-protected*
 
+## User Account Commands
+### Check cuurent username is being use
+`whoami`
 
+### To retrieve detailed information about your user account—including user ID, group ID, and group memberships
+`id`
+
+### Switch to another user account
+`su userB`
+
+### SSH with username
+`ssh username@hostname/ip`
+
+### Sudo Privileges
+`sudo ls /root`
+
+### curl
+
+| **Operation**                    | **Command Example**                                              | **Description**                                              |
+|----------------------------------|------------------------------------------------------------------|--------------------------------------------------------------|
+| Download a file                  | `curl -O https://example.com/file.zip`                           | Saves the file with its original name.                        |
+| Save output to a specific file   | `curl -o newfile.zip https://example.com/file.zip`               | Saves the file as `newfile.zip`.                              |
+| Follow redirects                 | `curl -L https://example.com`                                    | Follows HTTP redirects.                                       |
+| Get HTTP headers only            | `curl -I https://example.com`                                    | Fetches only the HTTP headers.                                |
+| Send a GET request               | `curl https://api.example.com/data`                              | Sends a simple GET request.                                   |
+| Send a POST request              | `curl -X POST -d "param1=value1&param2=value2" https://example.com/post` | Sends form data with a POST request.                          |
+| Send JSON with POST              | `curl -X POST -H "Content-Type: application/json" -d '{"key":"value"}' https://example.com/api` | Sends JSON data in a POST request.                            |
+| Add custom headers               | `curl -H "Authorization: Bearer YOUR_TOKEN" https://api.example.com` | Adds an Authorization header to your request.                |
+| Download silently (no progress)  | `curl -s -O https://example.com/file.zip`                        | Downloads a file without showing progress.                    |
+| Check HTTP status code           | `curl -o /dev/null -s -w "%{http_code}\n" https://example.com`   | Prints only the HTTP status code.                             |
+
+### Check Operating System
+
+`cat /etc/*release*`
+
+Example:
+
+```bash
+CentOS Linux release 7.7.1908 (Core)
+Derived from Red Hat Enterprise Linux 7.7 (Source)
+NAME="CentOS Linux"
+VERSION="7 (Core)"
+ID="centos"
+ID_LIKE="rhel fedora"
+VERSION_ID="7"
+PRETTY_NAME="CentOS Linux 7 (Core)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:centos:7"
+HOME_URL="https://www.centos.org/"
+BUG_REPORT_URL="https://bugs.centos.org/"
+```
 
