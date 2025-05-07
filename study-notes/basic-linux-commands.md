@@ -111,3 +111,44 @@ HOME_URL="https://www.centos.org/"
 BUG_REPORT_URL="https://bugs.centos.org/"
 ```
 
+## Package Management
+
+### RPM-Based Package Management
+Centos, Red Hat & Fedora
+
+`i` - Install a package  
+`-e` - Uninstall a package  
+`-q` - Query package details  
+*Note - RPM does not automatically resolve dependencies. For example, if you install Ansible—which requires Python and additional libraries—using RPM alone will not install missing dependencies.*
+
+### Yum
+- Overcome RPM limitations regarding dependencies.
+- Yum retrieves packages from software repositories—collections of RPM packages stored locally or on remote servers.
+- Repository configuration files are located in the `/etc/yum.repos.d/` directory.  
+
+Example;  
+`yum install ansible`
+
+### List available repositories;  
+`yum repolist`
+
+### List configuration files that define these repositories;  
+`ls /etc/yum.repos.d/`
+
+### Upgrade to Newer Version
+
+Example update repo using commands;  
+`yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm`  
+`yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
+
+### List installed/available packages
+`yum list ansible`
+
+### Removing an installed package
+`yum remove ansible`
+
+### List all available package versions
+`yum --showduplicates list ansible`
+
+### Install specific version
+`yum install ansible-X.X.X.X`
