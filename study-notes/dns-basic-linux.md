@@ -22,7 +22,7 @@ This means the system check the local `/etc/hosts` file first because `files` is
 ## How DNS Work? How Webpage is being load?
 
 #### There are 4 DNS servers involved in loading a webpage
-*Note: Info from https://www.cloudflare.com/learning/dns/what-is-dns/*
+*Note: Credits to https://www.cloudflare.com/learning/dns/what-is-dns/*
 
 - __*DNS recursor*__ -  The recursor can be thought of as a librarian who is asked to go find a particular book somewhere in a library. The DNS recursor is a server designed to receive queries from client machines through applications such as web browsers. Typically the recursor is then responsible for making additional requests in order to satisfy the client’s DNS query
 
