@@ -50,3 +50,46 @@ The 8 steps in a DNS lookup:
 *Once the 8 steps of the DNS lookup have returned the IP address for example.com, the browser is able to make the request for the web page:*
 9. The browser makes a HTTP request to the IP address.
 10. The server at that IP returns the webpage to be rendered in the browser (step 10).
+
+---
+![DNS_Seq_Diagram](./images/DNS_Complete_Flow.jpg)
+---
+
+### DNS Caching
+- Temporary stored data in a location that results in improvement in performance and realiability for data requests.
+- Store the data closer to the requesting client so that DNS query can be resolved earlier and additional queries further down the DNS lookup chain can be avoided.
+- Improve load time, reduce bandwidth and CPU consumption. 
+- DNS can be cached at variety locations, each of which will store DNS records for a set amount of time determined by a time-to-live (TTL).
+- Example - Browser DNS Caching & Operating Sytem (OS) level DNS Caching
+
+
+### DNS Testing Tools
+
+| Tool       | Protocol | Port   | Use Case                                 |
+|------------|----------|--------|-------------------------------------------|
+| nslookup   | UDP/TCP  | 53     | Basic DNS queries                         |
+| dig        | UDP/TCP  | 53     | Detailed DNS queries and advanced options |
+
+#### nslookup
+
+- Simple DNS query tools default on Windows, macOS and Unix/Linux
+- Uses **UDP port 53** by default
+- Falls back to **TCP port 53** if response is too large
+
+Example;  
+
+        nslookup example.com
+        nslookup example.com
+        nslookup -type=MX gmail.com
+
+#### dig
+- For deep diagnostics
+- **UDP port 53** by default
+- ** TCP port 53** for large responses or `+tcp` flag
+
+Example;
+
+        dig example.com
+        dig MX gmail.com
+        dig @1.1.1.1 example.com
+        dig +tcp example.com
