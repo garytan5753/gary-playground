@@ -108,5 +108,54 @@ Maps the path that packets take from the source to a destination host across an 
 - `telnet` only uses **TCP** and does not support **UDP**
 - Default port - **23** but you can test any **TCP port** using the Telnet client
 
+        telnet [hostname or IP address] [port]
         telnet smtp.gmail.com 587
+        telnet google.com 80
+
+### SSH (Secure Shell)
+
+Features of SSH
+
+| Feature            | Description                                    |
+| ------------------ | ---------------------------------------------- |
+| **Protocol**       | TCP                                            |
+| **Default Port**   | **22**                                         |
+| **Encryption**     | Yes (strong encryption using RSA, ECDSA, etc.) |
+| **Authentication** | Username/password or public/private key        |
+| **Secure**         | Yes, unlike Telnet or FTP                      |
+
+#### Basic Syntax
+                ssh [user]@[hostname or IP address]
+                ssh gary@192.168.1.10
+
+### scp
+Securely transfer files between a local and a remote host or between two remote hosts.  
+
+| Feature            | Description                                  |
+| ------------------ | -------------------------------------------- |
+| **Protocol**       | SSH (Secure Shell)                           |
+| **Port**           | TCP port **22** (default)                    |
+| **Encryption**     | Yes – same as SSH (RSA, ECDSA, etc.)         |
+| **Authentication** | Password or SSH key                          |
+| **Security**       | Encrypted, secure (unlike FTP or plain copy) |
+
+#### Basic Syntax
+                scp [options] source destination
+                ### Copy from local to remote
+                scp file.txt user@192.168.1.10:/home/user/
+                ### Copy from remmote to local
+                scp user@192.168.1.10:/home/user/file.txt .
+                ### Copy entire directory recursively
+                scp -r myfolder user@192.168.1.10:/home/user/
+
+#### `scp` Options
+
+| Option | Description                              |
+| ------ | ---------------------------------------- |
+| `-r`   | Copy directories recursively             |
+| `-P`   | Use a different SSH port (default is 22) |
+| `-i`   | Use an identity (private key) file       |
+| `-v`   | Verbose mode (for debugging)             |
+| `-C`   | Enable compression                       |
+
 
