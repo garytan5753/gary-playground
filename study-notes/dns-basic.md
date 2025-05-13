@@ -1,4 +1,4 @@
-# DNS Basic Linux
+# DNS Basic
 
 ### Configure local machine to resolve
 
