@@ -38,7 +38,7 @@ It is created as a Virtual Machine on Hyper-V.
 4. Select "Role-based or feature-based installation".
 ![](images/Set_Up_Roles_2.jpg)
 5. Select local server (the server itself).  
-6. Install Roles - "Active Directory Domain Services & DNS Server".
+6. Install Roles - "Active Directory Domain Services & DNS Server".  
 ![](images/Set_Up_Roles_3.jpg)
 7. Once complete installation, click on "Promote this server to a domain controller".
 ![](images/Set_Up_Roles_4.jpg)
