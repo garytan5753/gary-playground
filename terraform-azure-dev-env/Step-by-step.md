@@ -191,7 +191,7 @@ resource "azurerm_network_interface" "example" {
 
 ```hcl
 resource "azurerm_linux_virtual_machine" "example" {
-  name                = "terra-vm-1"
+  name                = "example-vm-1"
   resource_group_name = azurerm_resource_group.example.name
   location            = azurerm_resource_group.example.location
   size                = "Standard_B1s"
